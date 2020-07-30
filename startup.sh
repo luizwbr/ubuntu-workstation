@@ -524,7 +524,7 @@ cat <<EOF >  ~/.config/Code/User/settings.json
   },
 }
 EOF
-    
+
     echo "${LIGHTGREEN}Installing VSCode Extensions${NOCOLOR}"
     code --install-extension alexcvzz.vscode-sqlite
     code --install-extension basarat.god
@@ -552,13 +552,13 @@ EOF
     code --install-extension silvenon.mdx
     code --install-extension yzhang.markdown-all-in-one
     code --install-extension shakram02.bash-beautify
-    
+
     echo "${LIGHTGREEN}Installing Omni theme${NOCOLOR}"
     git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni
-    
+
     echo "${LIGHTGREEN}Installing Font Ligatures${NOCOLOR}"
     hyper i hyper-font-ligatures
-    
+
     echo "${LIGHTGREEN}Implementing Hyper settings${NOCOLOR}"
 cat <<EOF > ~/.hyper.js
 module.exports = {
@@ -617,8 +617,8 @@ module.exports = {
   },
 };
 EOF
-    
-    
+
+
     # ----------------------------------
     # Autosuggestions installation
     # ----------------------------------
@@ -626,7 +626,7 @@ EOF
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
     source ~/.zshrc
-    
+
     # ----------------------------------
     # ZSH Themes installation
     # ----------------------------------
@@ -635,7 +635,7 @@ EOF
     git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
     ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
     sed -i 's/.*ZSH_THEME=.*/ZSH_THEME="spaceship"/g' ~/.zshrc
-    
+
     echo "${LIGHTGREEN}Setting Spaceship configs${NOCOLOR}"
 cat <<EOF >> ~/.zshrc
 SPACESHIP_PROMPT_ORDER=(
@@ -665,7 +665,7 @@ zplugin light zdharma/fast-syntax-highlighting
 zplugin light zsh-users/zsh-autosuggestions
 zplugin light zsh-users/zsh-completions
 EOF
-    
+
     echo "${LIGHTGREEN}Installing ZSH Plugins${NOCOLOR}"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 cat <<EOF >> ~/.zshrc
@@ -674,8 +674,20 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 EOF
     source ~/.zshrc
-    
+
 fi
+
+# ----------------------------------
+# Nginx installation
+# ----------------------------------
+echo "${LIGHTGREEN}[2/35] Installing Nginx '${NOCOLOR}"
+sudo apt install nginx
+
+# ----------------------------------
+# Postman installation
+# ----------------------------------
+echo "${LIGHTGREEN}[2/35] Installing Postman '${NOCOLOR}"
+sudo snap install postman
 
 # ----------------------------------
 # Finishing installation

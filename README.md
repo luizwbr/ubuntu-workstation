@@ -5,19 +5,11 @@
 <h1 align="center">UBUNTU DEV WORKSTATION SETUP</h1>
 
 <blockquote align="center">
-This configs were made based on <a href="https://github.com/ErickWendel/ew-ubuntu-setup">Erick Wendel's setup</a> and my own needs as a JS Developer and other personal stuff.
+This configs were made based on <a href="https://github.com/ErickWendel/ew-ubuntu-setup">Erick Wendel's setup</a> and <a href="https://github.com/LeuAlmeida/ubuntu-workstation">Leo Almeida's setup</a>.
 </blockquote>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%23FF5722">
-
-  <a href="https://leunardo.dev">
-    <img alt="Made by Léu Almeida" src="https://img.shields.io/badge/made%20by-Léu%20Almeida-%23FF5722">
-  </a>
-  
-  <a href="https://github.com/LeuAlmeida/ubuntu-workstation/actions">
-    <img alt="Workflow" src="https://github.com/LeuAlmeida/ubuntu-workstation/workflows/CI/badge.svg">
-  </a>  
 </p>
 
 <p align="center">
@@ -68,9 +60,11 @@ sh startup.sh
 - [Reactotron](https://discord.com/) - Inspecting tool for ReactJS and React Native apps
 - [Discord](https://github.com/infinitered/reactotron) - Free channel chat
 - [Terminalizer](https://github.com/faressoft/terminalizer) - Record your terminal and generate animated gif images
-- [Expo](https://docs.expo.io/) - A framework and a platform for universal React applications. 
+- [Expo](https://docs.expo.io/) - A framework and a platform for universal React applications.
 - [Vercel](https://vercel.com/) - Optimal workflow for frontend teams.
 - [OpenOffice](http://www.openoffice.org/pt/) - Open source office productivity software package.
+- [Nginx](https://www.nginx.com/) - Nginx reverse proxy
+- [Postman](https://www.postman.com/) - Postman - The Collaboration Platform for API Development
 
 ## Authors
 
@@ -80,11 +74,7 @@ sh startup.sh
 
 - **Léu Almeida** - Additions and modifications - [Léu Almeida](https://github.com/LeuAlmeida)
 
-## ToDo
-
-- [ ] Implement Debian option
-- [ ] Include git shortcuts
-- [ ] Implement MacOS option
+- **Luiz Weber** - Additions and modifications - [Luiz Weber](https://github.com/luizwbr)
 
 ## License
 
