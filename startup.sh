@@ -31,23 +31,23 @@ sudo apt-get update
 # ----------------------------------
 # Curl installation
 # ----------------------------------
-echo "${LIGHTGREEN}[1/35] Installing curl 🔌'${NOCOLOR}"
+echo "${LIGHTGREEN}[1/39] Installing curl 🔌'${NOCOLOR}"
 sudo apt install curl -y
 
 # ----------------------------------
 # Git installation
 # ----------------------------------
-echo "${LIGHTGREEN}[2/35] Installing git 😻'${NOCOLOR}"
+echo "${LIGHTGREEN}[2/39] Installing git 😻'${NOCOLOR}"
 sudo apt install git -y
 
 echo "${ORANGE}What name do you want to use in GIT user.name?"
-echo "For example, mine will be '${ORANGE}Léu Almeida'${NOCOLOR}"
+echo "For example, mine will be '${ORANGE}Luiz Weber'${NOCOLOR}"
 read git_config_user_name
 git config --global user.name "$git_config_user_name"
 clear
 
 echo "${ORANGE}What email do you want to use in GIT user.email?"
-echo "For example, mine will be '${ORANGE}leo@webid.net.br'${NOCOLOR}"
+echo "For example, mine will be '${ORANGE}luiz.weber@pm.me'${NOCOLOR}"
 read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
@@ -63,12 +63,12 @@ gsettings set org.gnome.mutter workspaces-only-on-primary false
 # ----------------------------------
 # ZSH installation
 # ----------------------------------
-echo "${LIGHTGREEN}[3/35] Installing zsh ⚡${NOCOLOR}"
+echo "${LIGHTGREEN}[3/39] Installing zsh ⚡${NOCOLOR}"
 sudo apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s /bin/zsh
 
-echo "${LIGHTGREEN}[4/35] Installing tool to handle clipboard via CLI${NOCOLOR}"
+echo "${LIGHTGREEN}[4/39] Installing tool to handle clipboard via CLI${NOCOLOR}"
 sudo apt-get install xclip -y
 
 export alias pbcopy='xclip -selection clipboard'
@@ -78,7 +78,7 @@ source ~/.zshrc
 # ----------------------------------
 # VsCode installation
 # ----------------------------------
-echo "${LIGHTGREEN}[5/35] Installing VsCode 💼${NOCOLOR}"
+echo "${LIGHTGREEN}[5/39] Installing VsCode 💼${NOCOLOR}"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -89,20 +89,20 @@ sudo apt-get install code -y # or code-insiders
 # ----------------------------------
 # Spotify installation
 # ----------------------------------
-echo "${LIGHTGREEN}[6/35] Installing spotify 🎵'${NOCOLOR}"
+echo "${LIGHTGREEN}[6/39] Installing spotify 🎵'${NOCOLOR}"
 sudo snap install spotify
 
 # ----------------------------------
 # Google Chrome installation
 # ----------------------------------
-echo "${LIGHTGREEN}[7/35] Installing Google Chrome 🖥'${NOCOLOR}"
+echo "${LIGHTGREEN}[7/39] Installing Google Chrome 🖥'${NOCOLOR}"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # ----------------------------------
 # NVM installation
 # ----------------------------------
-echo "${LIGHTGREEN}[8/35] Installing NVM ⏩'${NOCOLOR}"
+echo "${LIGHTGREEN}[8/39] Installing NVM ⏩'${NOCOLOR}"
 sh -c "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash)"
 
 export NVM_DIR="$HOME/.nvm" && (
@@ -125,7 +125,7 @@ source ~/.zshrc
 # ----------------------------------
 # Node.js installation
 # ----------------------------------
-echo "${LIGHTGREEN}[9/35] Installing Node.js 😎${NOCOLOR}"
+echo "${LIGHTGREEN}[9/39] Installing Node.js 😎${NOCOLOR}"
 nvm --version
 nvm install 12.18.2
 nvm alias default 12.18.2
@@ -135,22 +135,22 @@ npm --version
 # ----------------------------------
 # Typescript installation
 # ----------------------------------
-echo "${LIGHTGREEN}[10/35] Installing Typescript ⚡${NOCOLOR}"
+echo "${LIGHTGREEN}[10/39] Installing Typescript ⚡${NOCOLOR}"
 npm install -g typescript
 
 # ----------------------------------
 # ReactJS CRA installation
 # ----------------------------------
-echo "${LIGHTGREEN}[11/35] Installing Create React App ⚡${NOCOLOR}"
+echo "${LIGHTGREEN}[11/39] Installing Create React App ⚡${NOCOLOR}"
 npm install -g create-react-app
 
 # ----------------------------------
 # GatsbyJS installation
 # ----------------------------------
-echo "${LIGHTGREEN}[12/35] Installing GatsbyJS ⚡${NOCOLOR}"
+echo "${LIGHTGREEN}[12/39] Installing GatsbyJS ⚡${NOCOLOR}"
 npm install -g gatsby-cli
 
-echo "${LIGHTGREEN}[13/35] Installing Yarn ⚡${NOCOLOR}"
+echo "${LIGHTGREEN}[13/39] Installing Yarn ⚡${NOCOLOR}"
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt install yarn
@@ -159,7 +159,7 @@ clear
 # ----------------------------------
 # React Native installation
 # ----------------------------------
-echo "${LIGHTGREEN}[14/35] Installing React Native CLI 📲${NOCOLOR}"
+echo "${LIGHTGREEN}[14/39] Installing React Native CLI 📲${NOCOLOR}"
 sudo npm install -g react-native-cli
 
 echo "${LIGHTGREEN}Installing JDK (Java Dvelopment Kit)${NOCOLOR}"
@@ -178,7 +178,7 @@ sudo apt-get install gcc-multilib lib32z1 lib32stdc++6
 # ----------------------------------
 # Franz installation
 # ----------------------------------
-echo "${LIGHTGREEN}[15/35] Installing Franz 💬'${NOCOLOR}"
+echo "${LIGHTGREEN}[15/39] Installing Franz 💬'${NOCOLOR}"
 wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
 sudo dpkg -i franz.debchristian-kohler.path-intellisense
 sudo apt-get install -y -f
@@ -186,7 +186,7 @@ sudo apt-get install -y -f
 # ----------------------------------
 # Hyper installation
 # ----------------------------------
-echo "${LIGHTGREEN}[16/35] Installing Hyper${NOCOLOR}"
+echo "${LIGHTGREEN}[16/39] Installing Hyper${NOCOLOR}"
 sudo apt-get install gdebi
 wget https://hyper-updates.now.sh/download/linux_deb
 sudo gdebi linux_deb
@@ -194,7 +194,7 @@ sudo gdebi linux_deb
 # ----------------------------------
 # Docker installation
 # ----------------------------------
-echo "${LIGHTGREEN}[17/35] Installing Docker 🐳'${NOCOLOR}"
+echo "${LIGHTGREEN}[17/39] Installing Docker 🐳'${NOCOLOR}"
 sudo apt-get remove docker docker-engine docker.io
 sudo apt install docker.io -y
 sudo systemctl start docker
@@ -207,7 +207,7 @@ docker run hello-world
 # ----------------------------------
 # Docker Compose installation
 # ----------------------------------
-echo "${LIGHTGREEN}[18/35] Installing docker-compose 🍱'${NOCOLOR}"
+echo "${LIGHTGREEN}[18/39] Installing docker-compose 🍱'${NOCOLOR}"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
@@ -215,20 +215,20 @@ docker-compose --version
 # ----------------------------------
 # Kubectl installation
 # ----------------------------------
-echo "${LIGHTGREEN}[19/35] Installing kubectl ⏹${NOCOLOR}"
+echo "${LIGHTGREEN}[19/39] Installing kubectl ⏹${NOCOLOR}"
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
 # ----------------------------------
 # Heroku CLI installation
 # ----------------------------------
-echo "${LIGHTGREEN}[20/35] Installing heroku-cli 💜${NOCOLOR}"
+echo "${LIGHTGREEN}[20/39] Installing heroku-cli 💜${NOCOLOR}"
 curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 heroku --version
 
 # ----------------------------------
 # AWS CLI installation
 # ----------------------------------
-echo "${LIGHTGREEN}[21/35] Installing aws-cli 💛'${NOCOLOR}"
+echo "${LIGHTGREEN}[21/39] Installing aws-cli 💛'${NOCOLOR}"
 sudo apt-get install awscli -y
 aws --version
 curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
@@ -238,7 +238,7 @@ session-manager-plugin --version
 # ----------------------------------
 # Fzf installation
 # ----------------------------------
-echo "${LIGHTGREEN}[22/35] Installing fzf 🔎${NOCOLOR}"
+echo "${LIGHTGREEN}[22/39] Installing fzf 🔎${NOCOLOR}"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 source ~/.zshrc
@@ -246,7 +246,7 @@ source ~/.zshrc
 # ----------------------------------
 # Dbeaver installation
 # ----------------------------------
-echo "${LIGHTGREEN}[23/35] Installing dbeaver ⌛${NOCOLOR}"
+echo "${LIGHTGREEN}[23/39] Installing dbeaver ⌛${NOCOLOR}"
 wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
 sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
 sudo apt-get install -f
@@ -255,14 +255,14 @@ clear
 # ----------------------------------
 # Robo3t installation
 # ----------------------------------
-echo "${LIGHTGREEN}[24/35] Installing Robo3t 💚${NOCOLOR}"
+echo "${LIGHTGREEN}[24/39] Installing Robo3t 💚${NOCOLOR}"
 snap install robo3t-snap
 clear
 
 # ----------------------------------
 # Insomnia installation
 # ----------------------------------
-echo "${LIGHTGREEN}[25/35] Installing Insomnia 🎱'${NOCOLOR}"
+echo "${LIGHTGREEN}[25/39] Installing Insomnia 🎱'${NOCOLOR}"
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
 | sudo tee -a /etc/apt/sources.list.d/insomnia.list
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
@@ -273,21 +273,21 @@ clear
 # ----------------------------------
 # Postbird installation
 # ----------------------------------
-echo "${LIGHTGREEN}[26/35] Installing Postbird 🐘${NOCOLOR}"
+echo "${LIGHTGREEN}[26/39] Installing Postbird 🐘${NOCOLOR}"
 yes | sudo snap install postbird
 clear
 
 # ----------------------------------
 # VLC installation
 # ----------------------------------
-echo "${LIGHTGREEN}[27/35] Installing VLC ⏯${NOCOLOR}"
+echo "${LIGHTGREEN}[27/39] Installing VLC ⏯${NOCOLOR}"
 sudo apt install vlc -y
 sudo apt install vlc-plugin-access-extra libbluray-bdj libdvdcss2 -y
 
 # ----------------------------------
 # GIMP installation
 # ----------------------------------
-echo "${LIGHTGREEN}[29/35] Installing GIMP 🖼${NOCOLOR}"
+echo "${LIGHTGREEN}[29/39] Installing GIMP 🖼${NOCOLOR}"
 yes | sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get install gimp gimp-gmic gmic -y
@@ -297,7 +297,7 @@ clear
 # ----------------------------------
 # Reactotron installation
 # ----------------------------------
-echo "${LIGHTGREEN}[30/35] Installing Reactotron ⚛${NOCOLOR}"
+echo "${LIGHTGREEN}[30/39] Installing Reactotron ⚛${NOCOLOR}"
 wget -c https://github.com/infinitered/reactotron/releases/download/v2.17.1/reactotron-app_2.17.1_amd64.deb
 sudo dpkg -i reactotron-app_2.17.1_amd64.deb
 clear
@@ -305,14 +305,14 @@ clear
 # ----------------------------------
 # Discord installation
 # ----------------------------------
-echo "${LIGHTGREEN}[31/35] Installing Discord 💬${NOCOLOR}"
+echo "${LIGHTGREEN}[31/39] Installing Discord 💬${NOCOLOR}"
 sudo snap install discord --classic
 clear
 
 # ----------------------------------
 # Terminalizer installation
 # ----------------------------------
-echo "${LIGHTGREEN}[32/35] Installing Terminalizer 💅${NOCOLOR}"
+echo "${LIGHTGREEN}[32/39] Installing Terminalizer 💅${NOCOLOR}"
 npm install -g terminalizer
 
 cat <<EOF > ~/.terminalizer
@@ -375,7 +375,7 @@ clear
 # ----------------------------------
 # Expo CLI installation
 # ----------------------------------
-echo "${LIGHTGREEN}[33/35] Installing Expo 📱${NOCOLOR}"
+echo "${LIGHTGREEN}[33/39] Installing Expo 📱${NOCOLOR}"
 npm install -g terminalizer
 clear
 
@@ -383,7 +383,7 @@ clear
 # ----------------------------------
 # Vercel CLI installation
 # ----------------------------------
-echo "${LIGHTGREEN}[34/35] Installing Vercel CLI ⬆${NOCOLOR}"
+echo "${LIGHTGREEN}[34/39] Installing Vercel CLI ⬆${NOCOLOR}"
 npm install -g vercel
 clear
 
@@ -391,7 +391,7 @@ clear
 # ----------------------------------
 # OpenOffice installation
 # ----------------------------------
-echo "${LIGHTGREEN}[35/35] Installing OpenOffice 💻${NOCOLOR}"
+echo "${LIGHTGREEN}[35/39] Installing OpenOffice 💻${NOCOLOR}"
 if [ `getconf LONG_BIT` = "64" ]
 then
     wget http://ufpr.dl.sourceforge.net/project/openofficeorg.mirror/4.1.6/binaries/pt-BR/Apache_OpenOffice_4.1.6_Linux_x86-64_install-rpm_pt-BR.tar.gz -O openoffice.tar.gz
@@ -671,25 +671,25 @@ fi
 # ----------------------------------
 # Nginx installation
 # ----------------------------------
-echo "${LIGHTGREEN}[2/35] Installing Nginx '${NOCOLOR}"
+echo "${LIGHTGREEN}[36/39] Installing Nginx '${NOCOLOR}"
 sudo apt install nginx
 
 # ----------------------------------
 # Postman installation
 # ----------------------------------
-echo "${LIGHTGREEN}[2/35] Installing Postman '${NOCOLOR}"
+echo "${LIGHTGREEN}[37/39] Installing Postman '${NOCOLOR}"
 sudo snap install postman
 
 # ----------------------------------
 # Flameshot installation
 # ----------------------------------
-echo "${LIGHTGREEN}[2/35] Installing Flameshot '${NOCOLOR}"
+echo "${LIGHTGREEN}[38/39] Installing Flameshot '${NOCOLOR}"
 sudo apt install flameshot
 
 # ----------------------------------
-# Flameshot installation
+# Flameshot installationS
 # ----------------------------------
-echo "${LIGHTGREEN}[2/35] Installing Meld '${NOCOLOR}"
+echo "${LIGHTGREEN}[39/39] Installing Meld '${NOCOLOR}"
 sudo apt install meld
 
 # ----------------------------------
