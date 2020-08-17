@@ -55,7 +55,6 @@ sh startup.sh
 - [Insomnia](https://insomnia.rest/) - API Client
 - [Postbird](https://www.electronjs.org/apps/postbird) - PostgreSQL GUI
 - [VLC](https://www.videolan.org/vlc/) - Media player
-- [Transmission](https://transmissionbt.com/) - Torrent client
 - [Gimp](https://www.gimp.org/) - Open source image editor
 - [Reactotron](https://discord.com/) - Inspecting tool for ReactJS and React Native apps
 - [Discord](https://github.com/infinitered/reactotron) - Free channel chat
@@ -63,8 +62,11 @@ sh startup.sh
 - [Expo](https://docs.expo.io/) - A framework and a platform for universal React applications.
 - [Vercel](https://vercel.com/) - Optimal workflow for frontend teams.
 - [OpenOffice](http://www.openoffice.org/pt/) - Open source office productivity software package.
-- [Nginx](https://www.nginx.com/) - Nginx reverse proxy
-- [Postman](https://www.postman.com/) - Postman - The Collaboration Platform for API Development
+- [Nginx](https://www.nginx.com/) - Nginx reverse proxy.
+- [Postman](https://www.postman.com/) - Postman - The Collaboration Platform for API Development.
+- [Flameshot](https://flameshot.js.org/) - Flameshot - Powerful yet simple to use screenshot software.
+- [Meld](https://meldmerge.org) - Meld - Meld is a visual diff and merge tool targeted at developers.
+
 
 ## Authors
 

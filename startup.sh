@@ -285,15 +285,6 @@ sudo apt install vlc -y
 sudo apt install vlc-plugin-access-extra libbluray-bdj libdvdcss2 -y
 
 # ----------------------------------
-# Transmission installation
-# ----------------------------------
-echo "${LIGHTGREEN}[28/35] Installing Transmission 📩${NOCOLOR}"
-sudo add-apt-repository ppa:transmissionbt/ppa
-sudo apt-get update
-sudo apt-get install transmission transmission-qt -y
-clear
-
-# ----------------------------------
 # GIMP installation
 # ----------------------------------
 echo "${LIGHTGREEN}[29/35] Installing GIMP 🖼${NOCOLOR}"
@@ -690,6 +681,18 @@ echo "${LIGHTGREEN}[2/35] Installing Postman '${NOCOLOR}"
 sudo snap install postman
 
 # ----------------------------------
+# Flameshot installation
+# ----------------------------------
+echo "${LIGHTGREEN}[2/35] Installing Flameshot '${NOCOLOR}"
+sudo apt install flameshot
+
+# ----------------------------------
+# Flameshot installation
+# ----------------------------------
+echo "${LIGHTGREEN}[2/35] Installing Meld '${NOCOLOR}"
+sudo apt install meld
+
+# ----------------------------------
 # Finishing installation
 # ----------------------------------
 echo "${LIGHTGREEN}Commiting changes 🎈${NOCOLOR}"
@@ -719,4 +722,4 @@ echo "                       |__|__|                "
 echo "                       /-'Y'-\                "
 echo "                      (__/ \__)               "
 echo ""
-echo "${YELLOW}You're welcome to contribute to the project on https://github.com/LeuAlmeida/ubuntu-workstation${NOCOLOR}"
+echo "${YELLOW}You're welcome to contribute to the project on https://github.com/luizwbr/ubuntu-workstation${NOCOLOR}"
